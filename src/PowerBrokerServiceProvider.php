@@ -1,7 +1,7 @@
 <?php namespace DemocracyApps\PowerBroker;
 
 /*
-* This file is part of the DemocracyApps\member-org package.
+* This file is part of the DemocracyApps\powerbroker package.
 *
 * Copyright 2015 DemocracyApps, Inc.
 *
