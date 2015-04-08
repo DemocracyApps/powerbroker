@@ -17,7 +17,7 @@ class CreatePowerGroupsTable extends Migration {
 			$table->increments('id');
 			$table->string('name');
 			$table->integer('group')->nullable;
-			$table->foreign('group')->references('id')->on('power_groups');
+			$table->foreign('group')->references('id')->on('da_power_groups');
 			$table->timestamps();
 		});
 	}
