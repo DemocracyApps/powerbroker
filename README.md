@@ -39,8 +39,9 @@ For convenience, you may also add the Facade to app.php
 
 ### Configuration Parameters
 
-Next, publish the configuration file by running
+Next, publish the migrations by running
 
     php artisan vendor:publish
 
-and edit 'config/domain-context.php'. There are currently four configuration settings in use in the package.
+This will create two migrations, one for power groups (table 'da_power_groups') and one for powers (table 'da_powers').
+

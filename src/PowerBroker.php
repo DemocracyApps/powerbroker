@@ -33,6 +33,24 @@ class PowerBroker {
         return $power;
     }
 
+    /**
+     * @param $name
+     * @param null $parentId
+     * @return PowerGroup
+     * @throws \Exception
+     */
+    public function createNewPowerGroup ($name, $parentId = null)
+    {
+        if ($name == null || sizeof($name) < 1) throw new \Exception("Invalid power group name - null or zero-length");
+        $group = new PowerGroup();
+        $group->name = $name;
+        if ($parentId != null) {
+            $group->group = $parentId;
+        }
+        $group->save();
+        return $group;
+    }
+
     public function groupHasPowerByName ($groupId, $powerName)
     {
         $power = Power::where('name','=',$powerName)->first();
